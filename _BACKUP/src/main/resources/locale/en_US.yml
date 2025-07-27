@@ -1,0 +1,90 @@
+# ------------------------------------------------------------------------- #
+#                                  English                                  #
+#                                  =======                                  #
+#  This is the configuration for all messages sent to the player or the     #
+#  console.                                                                 #
+#                                                                           #
+#  MiniMessage format is used for these messages.                           #
+#  Documentation: https://docs.advntr.dev/minimessage/format                #
+#                                                                           #
+#  Please remember to always enclose long or nested strings in " or '.      #
+#                                                                           #
+#  Sometimes you can use the built-in placeholders below.                   #
+#  The available placeholders are always listed above the messages.         #
+#                                                                           #
+#  Alternatively, you can also use all placeholders from PlaceholderAPI,    #
+#  as long as the plugin and all required expansions are installed.         #
+# ------------------------------------------------------------------------- #
+
+
+
+# --------------------------------------- #
+#                 General                 #
+# --------------------------------------- #
+
+prefix: "<dark_gray>[<gradient:#FA6F02:#EA034E><bold>RHSignItem</bold></gradient><dark_gray>]<reset>"
+
+#    Available placeholders: %prefix%
+no-permission: "%prefix% <gray>You don't have the permission for that"
+no-console-command: "%prefix% <gray>This command can only be executed in game"
+no-item: "%prefix% <gray>You have no item in your hand"
+help:
+  - "<gray>- - - %prefix% <gray>- - -"
+  - ""
+  - " <hover:show_text:'<gray>Example command:<newline><white>/sign \\<gradient:#E1CB4A:#13C158>I am colorful<newline><newline><gray>Will result in:<newline><gradient:#E1CB4A:#13C158>I am colorful'>/sign <gray><<aqua>text<gray>></hover> <dark_gray>-<gray> signs the held item with <aqua>text"
+  - " <white>/sign <yellow>delete <dark_gray>-<gray> the signature gets <yellow>deleted"
+  - " <white>/sign <yellow>lock<dark_gray><italic><hover:show_text:'<white>Elevated permissions needed'>*</hover><reset> <dark_gray>-<gray> the item gets <yellow>locked"
+  - " <white>/sign <yellow>unlock<dark_gray><italic><hover:show_text:'<white>Elevated permissions needed'>*</hover><reset> <dark_gray>-<gray> the item gets <yellow>unlocked"
+  - ""
+  - " <hover:show_text:'<gray>Example command:<newline><white>/rename \\<gradient:#E1CB4A:#13C158>I am colorful<newline><newline><gray>Will result in:<newline><gradient:#E1CB4A:#13C158>I am colorful'>/rename <gray><<aqua>text<gray>></hover><dark_gray><italic><hover:show_text:'<white>Elevated permissions needed'>*</hover><reset> <dark_gray>-<gray> <yellow>renames<gray> the item with <aqua>text"
+
+# --------------------------------------- #
+#           Locking & Unlocking           #
+# --------------------------------------- #
+
+#    Available placeholders: %prefix%
+lock: "%prefix% <gray>The item has been locked"
+unlock: "%prefix% <gray>The item has been unlocked"
+not-locked: "%prefix% <gray>This item is not locked"
+wrong-lock-owner: "%prefix% <gray>This item can only be unlocked by <green>%player%"
+
+#    Available placeholders: %prefix% | %player%
+locked: "%prefix% <gray>This item is locked by <green>%player%"
+locked-own: "%prefix% <gray>This item is locked by <green>you"
+already-locked: "%prefix% <gray>This item is already locked by <green>%player%"
+already-locked-own: "%prefix% <gray>This item is already locked by <green>you"
+
+# --------------------------------------- #
+#                 Signing                 #
+# --------------------------------------- #
+
+#    Available placeholders: %prefix%
+sign: "%prefix% <gray>The item has been signed"
+delete: "%prefix% <gray>The signature has been removed"
+rename: "%prefix% <gray>The item has been renamed"
+not-signed: "%prefix% <gray>This item is not signed"
+wrong-sign-owner: "%prefix% <gray>You are not the owner of the item"
+
+#    Available placeholders: %prefix% | %player%
+already-signed: "%prefix% <gray>This item is already signed by <green>%player%"
+already-signed-own: "%prefix% <gray>This item is already signed by <green>you"
+
+
+# --------------------------------------- #
+#        Restrictions & Blacklist         #
+# --------------------------------------- #
+
+#    Available placeholders: %prefix%
+blacklisted: "%prefix% <gray>This item is blacklisted"
+blocked-lore: "%prefix% <gray>You can't sign this item, because it already contains a lore"
+
+#    Available placeholders: %prefix% | %stacksize%
+stack-limit: "%prefix% <gray>You are trying to sign too many items (max. %stacksize%)"
+
+# --------------------------------------- #
+#                  Vault                  #
+# --------------------------------------- #
+
+#    Available placeholders: %prefix% | %cost%
+vault-withdraw-success: "%prefix% <gray>That action cost you <yellow>$%cost%"
+vault-withdraw-fail: "%prefix% <gray>You can't afford to pay <yellow>$%cost% <gray>for using this command"

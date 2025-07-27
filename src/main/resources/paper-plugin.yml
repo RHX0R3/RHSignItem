@@ -1,0 +1,21 @@
+name: RHSignItem
+version: '1.21_R8'
+main: eu.raidersheaven.rhsignitem.Main
+api-version: '1.21'
+authors: [ X0R3 ]
+description: Adds a signature to items. Also can rename them.
+website: https://raidersheaven.eu/
+dependencies:
+  server:
+    Vault:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    LuckPerms:
+      load: BEFORE
+      required: false
+      join-classpath: true

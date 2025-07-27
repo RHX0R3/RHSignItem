@@ -1,0 +1,92 @@
+# ------------------------------------------------------------------------- #
+#                                  Deutsch                                  #
+#                                  =======                                  #
+#  Das ist die Konfiguration für alle Nachrichten, die an den Spieler bzw.  #
+#  die Konsole gesendet werden.                                             #
+#                                                                           #
+#  Für die Nachrichten wird das MiniMessage-Format genutzt.                 #
+#  Dokumentation: https://docs.advntr.dev/minimessage/format                #
+#                                                                           #
+#  Vergiss bitte nicht, bei langen oder verschachtelten Strings immer       #
+#  noch ein " bzw. ' hinzuzufügen.                                          #
+#                                                                           #
+#  Unten kannst Du manchmal die integrierten Platzhalter verwenden.         #
+#  Über den Nachrichten stehen immer die verfügbaren Platzhalter.           #
+#                                                                           #
+#  Alternativ kannst Du auch alle Platzhalter der PlaceholderAPI nutzen,    #
+#  sofern das Plugin und alle erforderlichen Expansions installiert sind.   #
+# ------------------------------------------------------------------------- #
+
+
+# --------------------------------------- #
+#                 General                 #
+# --------------------------------------- #
+
+prefix: "<dark_gray>[<gradient:#FA6F02:#EA034E><bold>RHSignItem</bold></gradient><dark_gray>]<reset>"
+
+#    Anwendbare Platzhalter: %prefix%
+no-permission: "%prefix% <gray>Du hast keine Berechtigung für diesen Befehl"
+no-console-command: "%prefix% <gray>Dieser Befehl kann nur im Spiel ausgeführt werden"
+no-item: "%prefix% <gray>Du hältst kein Item in der Hand"
+no-item-in-offhand: "%prefix% <gray>Du hältst kein Item in der Offhand"
+wrong-item-in-offhand: "%prefix% <gray>Du musst <yellow>%item% <gray>in der Offhand halten"
+help:
+  - "<gray>- - - %prefix% <gray>- - -"
+  - ""
+  - " <hover:show_text:'<gray>Befehl-Beispiel:<newline><white>/sign \\<gradient:#E1CB4A:#13C158>Ich bin bunt<newline><newline><gray>Wird angezeigt als:<newline><gradient:#E1CB4A:#13C158>Ich bin bunt'>/sign <gray><<aqua>text<gray>></hover> <dark_gray>-<gray> Signiert ein Item mit dem <aqua>text"
+  - " <white>/sign <yellow>delete <dark_gray>-<yellow> Entfernt<gray> die Signatur"
+  - " <white>/sign <yellow>lock<dark_gray><italic><hover:show_text:'<white>Erhöhte Berechtigungen erforderlich'>*</hover><reset> <dark_gray>-<yellow> Sperrt <gray>ein Item gegen Signaturen"
+  - " <white>/sign <yellow>unlock<dark_gray><italic><hover:show_text:'<white>Erhöhte Berechtigungen erforderlich'>*</hover><reset> <dark_gray>-<yellow> Entsperrt <gray>ein Item"
+  - ""
+  - " <hover:show_text:'<gray>Befehl-Beispiel:<newline><white>/rename \\<gradient:#E1CB4A:#13C158>Ich bin bunt<newline><newline><gray>Wir angezeigt als:<newline><gradient:#E1CB4A:#13C158>Ich bin bunt'>/rename <gray><<aqua>text<gray>></hover><dark_gray><italic><hover:show_text:'<white>Erhöhte Berechtigungen erforderlich'>*</hover><reset> <dark_gray>-<gray> Ermöglicht eine <yellow>Namensänderung <gray>eines Items mit dem <aqua>text"
+
+# --------------------------------------- #
+#           Locking & Unlocking           #
+# --------------------------------------- #
+
+#    Anwendbare Platzhalter: %prefix%
+lock: "%prefix% <gray>Das Item wurde gesperrt"
+unlock: "%prefix% <gray>Das Item wurde entsperrt"
+not-locked: "%prefix% <gray>Das Item ist nicht gesperrt"
+wrong-lock-owner: "%prefix% <gray>Dieses Item kann nur von <green>%player% <gray>entsperrt werden"
+
+#    Anwendbare Platzhalter: %prefix% | %player%
+locked: "%prefix% <gray>Dieses Item wurde von <green>%player% <gray>gesperrt"
+locked-own: "%prefix% <gray>Dieses Item wurde von <green>Dir <gray>gesperrt"
+already-locked: "%prefix% <gray>Dieses Item wurde bereits von <green>%player% <gray>gesperrt"
+already-locked-own: "%prefix% <gray>Das Item wurde bereits von <green>Dir <gray>gesperrt"
+
+# --------------------------------------- #
+#                 Signing                 #
+# --------------------------------------- #
+
+#    Anwendbare Platzhalter: %prefix%
+sign: "%prefix% <gray>Du hast das Item signiert"
+delete: "%prefix% <gray>Du hast die Signatur vom Item entfernt"
+rename: "%prefix% <gray>Das Item wurde umbenannt"
+not-signed: "%prefix% <gray>Das Item hat noch keine Signatur"
+wrong-sign-owner: "%prefix% <gray>Du bist nicht der Besitzer des Items"
+
+#    Anwendbare Platzhalter: %prefix% | %player%
+already-signed: "%prefix% <gray>Dieses Item wurde bereits von <green>%player% <gray>signiert"
+already-signed-own: "%prefix% <gray>Dieses Item wurde bereits von <green>Dir <gray>signiert"
+
+
+# --------------------------------------- #
+#        Restrictions & Blacklist         #
+# --------------------------------------- #
+
+#    Anwendbare Platzhalter: %prefix%
+blacklisted: "%prefix% <gray>Dieses Item steht auf der Blacklist"
+blocked-lore: "%prefix% <gray>Du kannst dieses Item nicht signieren, da es bereits eine Lore enthält"
+
+#    Anwendbare Platzhalter: %prefix% | %stacksize%
+stack-limit: "%prefix% <gray>Du versuchst gerade zu viele Items zu signieren (max. %stacksize%)"
+
+# --------------------------------------- #
+#                  Vault                  #
+# --------------------------------------- #
+
+#    Anwendbare Platzhalter: %prefix% | %cost%
+vault-withdraw-success: "%prefix% <gray>Du hast <yellow>%cost% € <gray>bezahlt"
+vault-withdraw-fail: "%prefix% <gray>Du hast keine <yellow>%cost% € <gray>um diesen Befehl auszuführen"

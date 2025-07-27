@@ -1,0 +1,88 @@
+# ------------------------------------------------------------------------- #
+#                                  Русский                                  #
+#                                  =======                                  #
+#  Это конфигурация всех сообщений, отправляемых игроку или в консоль.      #
+#                                                                           #
+#  Используется формат MiniMessage.                                         #
+#  Документация: https://docs.advntr.dev/minimessage/format                 #
+#                                                                           #
+#  Не забывайте всегда заключать длинные или вложенные строки в " или '.    #
+#                                                                           #
+#  Иногда можно использовать встроенные плейсхолдеры ниже.                  #
+#  Доступные плейсхолдеры указаны над сообщениями.                          #
+#                                                                           #
+#  Также можно использовать все плейсхолдеры из PlaceholderAPI,             #
+#  если установлен плагин и все необходимые расширения.                     #
+# ------------------------------------------------------------------------- #
+
+# --------------------------------------- #
+#                 Общие                   #
+# --------------------------------------- #
+
+prefix: "<dark_gray>[<gradient:#FA6F02:#EA034E><bold>RHSignItem</bold></gradient><dark_gray>]<reset>"
+
+#    Доступные плейсхолдеры: %prefix%
+no-permission: "%prefix% <gray>У вас нет прав для выполнения этой команды"
+no-console-command: "%prefix% <gray>Эту команду можно выполнять только в игре"
+no-item: "%prefix% <gray>У вас нет предмета в руке"
+no-item-in-offhand: "%prefix% <gray>У вас нет предмета в другой руке"
+wrong-item-in-offhand: "%prefix% <gray>Вы должны держать <yellow>%item% <gray>в другой руке"
+help:
+  - "<gray>- - - %prefix% <gray>- - -"
+  - ""
+  - " <hover:show_text:'<gray>Пример команды:<newline><white>/sign \\<gradient:#E1CB4A:#13C158>Я яркий<newline><newline><gray>Будет отображаться как:<newline><gradient:#E1CB4A:#13C158>Я яркий'>/sign <gray><<aqua>текст<gray>></hover> <dark_gray>-<gray> подписывает предмет текстом <aqua>текст"
+  - " <white>/sign <yellow>delete <dark_gray>-<gray> подпись <yellow>удаляется"
+  - " <white>/sign <yellow>lock<dark_gray><italic><hover:show_text:'<white>Требуются повышенные права'>*</hover><reset> <dark_gray>-<gray> предмет <yellow>блокируется"
+  - " <white>/sign <yellow>unlock<dark_gray><italic><hover:show_text:'<white>Требуются повышенные права'>*</hover><reset> <dark_gray>-<gray> предмет <yellow>раз блокируется"
+  - ""
+  - " <hover:show_text:'<gray>Пример команды:<newline><white>/rename \\<gradient:#E1CB4A:#13C158>Я яркий<newline><newline><gray>Будет отображаться как:<newline><gradient:#E1CB4A:#13C158>Я яркий'>/rename <gray><<aqua>текст<gray>></hover><dark_gray><italic><hover:show_text:'<white>Требуются повышенные права'>*</hover><reset> <dark_gray>-<gray> <yellow>переименовывает<gray> предмет в <aqua>текст"
+
+# --------------------------------------- #
+#        Блокировка & Разблокировка       #
+# --------------------------------------- #
+
+#    Доступные плейсхолдеры: %prefix%
+lock: "%prefix% <gray>Предмет был заблокирован"
+unlock: "%prefix% <gray>Предмет был разблокирован"
+not-locked: "%prefix% <gray>Этот предмет не заблокирован"
+wrong-lock-owner: "%prefix% <gray>Этот предмет может разблокировать только <green>%player%"
+
+#    Доступные плейсхолдеры: %prefix% | %player%
+locked: "%prefix% <gray>Этот предмет заблокирован <green>%player%"
+locked-own: "%prefix% <gray>Этот предмет заблокирован <green>вами"
+already-locked: "%prefix% <gray>Этот предмет уже заблокирован <green>%player%"
+already-locked-own: "%prefix% <gray>Этот предмет уже заблокирован <green>вами"
+
+# --------------------------------------- #
+#                 Подпись                 #
+# --------------------------------------- #
+
+#    Доступные плейсхолдеры: %prefix%
+sign: "%prefix% <gray>Вы подписали предмет"
+delete: "%prefix% <gray>Вы удалили подпись с предмета"
+rename: "%prefix% <gray>Предмет был переименован"
+not-signed: "%prefix% <gray>Этот предмет не подписан"
+wrong-sign-owner: "%prefix% <gray>Вы не владелец этого предмета"
+
+#    Доступные плейсхолдеры: %prefix% | %player%
+already-signed: "%prefix% <gray>Этот предмет уже подписан <green>%player%"
+already-signed-own: "%prefix% <gray>Этот предмет уже подписан <green>вами"
+
+# --------------------------------------- #
+#       Ограничения & Черный список       #
+# --------------------------------------- #
+
+#    Доступные плейсхолдеры: %prefix%
+blacklisted: "%prefix% <gray>Этот предмет находится в черном списке"
+blocked-lore: "%prefix% <gray>Вы не можете подписать этот предмет, так как он уже содержит описание"
+
+#    Доступные плейсхолдеры: %prefix% | %stacksize%
+stack-limit: "%prefix% <gray>Вы пытаетесь подписать слишком много предметов (макс. %stacksize%)"
+
+# --------------------------------------- #
+#                 Оплата                  #
+# --------------------------------------- #
+
+#    Доступные плейсхолдеры: %prefix% | %cost%
+vault-withdraw-success: "%prefix% <gray>Вы заплатили <yellow>%cost% €"
+vault-withdraw-fail: "%prefix% <gray>У вас недостаточно <yellow>%cost% € <gray>для выполнения этой команды"
